@@ -1,0 +1,24 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.files.exclude":[
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.hg/**"
+  ],
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.classAttributes": [
+    "class", "className"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "emmet.includeLanguages": {
+    "tailwindcss": "css"
+  }
+}
