@@ -20,5 +20,8 @@
   },
   "emmet.includeLanguages": {
     "tailwindcss": "css"
-  }
+  },
+
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
 }

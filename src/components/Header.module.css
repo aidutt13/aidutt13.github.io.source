@@ -1,0 +1,12 @@
+.header {
+  --typewriter-cursor-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+  @apply
+    text-gray-100
+    bg-purple-900
+    text-6xl
+    font-extrabold
+    px-16
+    pt-8
+    pb-8
+  ;
+}

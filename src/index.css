@@ -2,36 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes typewriter-cursor {
   0% {
-    color: transparent;
+    border-left-width: 6px;
   }
   49% {
-    color: transparent;
+    border-left-width: 6px;
   }
   50% {
-    @apply text-gray-200;
+    border-left-width: 0;
   }
   100% {
-    @apply text-gray-200;
+    border-left-width: 0;
   }
 }
 
-#typewriter {
-  --steps: 8;
-  animation: typewriter 4s steps(--steps) infinite;
+[data-typewriter]::after {
+  content: 'a';
+
+  border: none;
+  border-left-style: solid;
+  border-left-color: var(--typewriter-cursor-color);
+  border-left-width: 0;
+
+  @apply text-transparent inline-block ml-2;
+  transform-origin: bottom;
+
+  height: 100%;
+
+  animation: typewriter-cursor 0.75s steps(2) infinite;
 }
 
-#typewriter::after {
-  content: '|';
-  animation: typewriter-cursor 1s steps(1) infinite;
+[data-typewriter] [data-selected='true'] {
+  @apply bg-blue-700;
+}
+
+[data-typewriter] [data-italic='true'] {
+  @apply italic;
+}
+
+[data-typewriter] [data-underline='true'] {
+  @apply underline;
+}
+
+body {
+  @apply bg-zinc-800;
+}
+
+a {
+  @apply
+    underline
+    text-blue-700
+  ;
+}
+
+a:active {
+  @apply text-purple-800;
+}
+
+a:focus {
+  @apply outline-2;
+}
+
+a:visited {
+  @apply text-purple-700;
 }

@@ -1,0 +1,8 @@
+.button {
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+}
+
+.button:focus {
+  transform: translateY(0);
+}
